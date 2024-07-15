@@ -1,0 +1,39 @@
+{
+  "canisters": {
+    "atiman_backend": {
+      "build": "npx azle atiman_backend",
+      "candid": "src/atiman_backend/atiman_backend.did",
+      "gzip": true,
+      "main": "src/atiman_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/atiman_backend/atiman_backend.wasm"
+    },
+    "atiman_frontend": {
+      "dependencies": [
+        "atiman_backend"
+      ],
+      "source": [
+        "src/atiman_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "atiman_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
