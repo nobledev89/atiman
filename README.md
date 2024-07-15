@@ -1,2 +1,2 @@
 # atiman
-ICP app for Atiman
+Atiman ICP
